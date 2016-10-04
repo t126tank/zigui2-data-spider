@@ -1,0 +1,24 @@
+{
+  "name": "zigui2-data-spider",
+  "version": "1.0.0",
+  "description": "spider data for tan's zigui2",
+  "scripts": {
+    "dev": "webpack --watch NODE_ENV='debug'",
+    "exec": "node dist/app.min.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0"
+  }
+}
