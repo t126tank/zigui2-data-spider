@@ -7,7 +7,7 @@ first of all `npm install`
 
 2. open a new terminal session `npm run start` to execute
 
-#[PROD]
+##[PROD]
 1. `npm run build` to build.
 
 2. `node app.min.js` in dist dir 
