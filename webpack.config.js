@@ -1,11 +1,10 @@
-var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
   target: "node",
   context: path.join(__dirname, "src"),
-  devtool: debug ? "inline-sourcemap" : null,
+  devtool: "inline-sourcemap",
   entry: "./app.js",
   module: {
     loaders: [
@@ -25,10 +24,5 @@ module.exports = {
     path: __dirname + "/dist/",
     libraryTarget: "commonjs2",
     filename: "app.min.js"
-  },
-  plugins: debug ? [] : [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: !!debug }),
-  ],
+  }
 };

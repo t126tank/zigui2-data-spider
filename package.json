@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "spider data for tan's zigui2",
   "scripts": {
-    "watch": "webpack --watch NODE_ENV='debug'",
+    "watch": "./node_modules/.bin/webpack --watch",
+    "build": "./node_modules/.bin/webpack -p",
     "start": "node dist/app.min.js",
-    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

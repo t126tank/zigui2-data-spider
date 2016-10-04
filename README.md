@@ -1,7 +1,13 @@
 ## zigui2-data-spider
 
-1.`npm install`
+first of all `npm install`
 
-2.[DEV] open a terminal `npm run watch` to watch. 
+#[DEV]
+1. open a terminal `npm run watch` to watch. 
 
-3.open a new terminal session `npm run start` to execute
+2. open a new terminal session `npm run start` to execute
+
+#[PROD]
+1. `npm run build` to build.
+
+2. `node app.min.js` in dist dir 
