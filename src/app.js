@@ -1,14 +1,11 @@
-import cheerio from 'cheerio'
-import download from './download'
+import saveData from './saveData'
+import stock from './crawlers/stock'
+import fx from './crawlers/fx'
 
-const url = 'http://info.finance.yahoo.co.jp/fx/list/'
+// example 1
+stock().then(result => saveData('stock', result))
 
-download(url, data => {
-  if (data) {
-    const $ = cheerio.load(data)
-    const test = $('table.fxERCTbl').html()
-    console.log(test)
-  } else {
-    console.error('no data')
-  }
-})
+// example 2
+fx().then(result => saveData('fx', result))
+
+// add others crawlers 

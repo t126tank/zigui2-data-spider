@@ -15,7 +15,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'stage-0'],
-          plugins: ['transform-decorators-legacy'],
+          plugins: ['transform-runtime', 'transform-decorators-legacy'],
         }
       }
     ]
@@ -29,6 +29,6 @@ module.exports = {
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: !!debug }),
   ],
 };
