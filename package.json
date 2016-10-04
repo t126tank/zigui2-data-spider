@@ -4,7 +4,7 @@
   "description": "spider data for tan's zigui2",
   "scripts": {
     "watch": "webpack --watch NODE_ENV='debug'",
-    "dev": "node dist/app.min.js",
+    "start": "node dist/app.min.js",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
