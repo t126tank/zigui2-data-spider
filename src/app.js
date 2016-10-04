@@ -1,8 +1,14 @@
 import cheerio from 'cheerio'
+import download from './download'
 
-const $ = cheerio.load('<h2 class="title">Hello world</h2>')
+const url = 'http://info.finance.yahoo.co.jp/fx/list/'
 
-$('h2.title').text('Hello there!')
-$('h2').addClass('welcome')
-
-console.log($.html());
+download(url, data => {
+  if (data) {
+    const $ = cheerio.load(data)
+    const test = $('table.fxERCTbl').html()
+    console.log(test)
+  } else {
+    console.error('no data')
+  }
+})
