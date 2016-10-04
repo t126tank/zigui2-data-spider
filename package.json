@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "spider data for tan's zigui2",
   "scripts": {
-    "dev": "webpack --watch NODE_ENV='debug'",
-    "exec": "node dist/app.min.js",
+    "watch": "webpack --watch NODE_ENV='debug'",
+    "dev": "node dist/app.min.js",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
