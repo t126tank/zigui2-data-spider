@@ -4,9 +4,9 @@ var path = require('path');
 
 module.exports = {
   target: "node",
-  context: path.join(__dirname, "src"),
-  devtool: debug ? "inline-sourcemap" : null,
-  entry: "./app.js",
+  context: path.resolve(__dirname),
+  devtool: debug ? "#cheap-module-source-map" : null,
+  entry: "./src/app.js",
   module: {
     loaders: [
       {
@@ -22,9 +22,10 @@ module.exports = {
   },
   externals: /^[a-z\-0-9]+$/,
   output: {
-    path: __dirname + "/dist/",
+    pathinfo: true,
+    path: path.join(__dirname, 'dist'),
     libraryTarget: "commonjs2",
-    filename: "app.min.js"
+    filename: "app.js"
   },
   plugins: debug ? [] : [
     new webpack.DefinePlugin({
